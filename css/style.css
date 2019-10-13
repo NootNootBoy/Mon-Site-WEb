@@ -159,7 +159,7 @@ nav ul li a:hover {
 #aboutSection h1:hover {
   color: #fc4949;
   transition: ease 0.5s;
-  text-shadow: 0 0 5px #d63031, 0 0 10px #d63031, 0 0 20px #d63031, 0 0 25px #d63031,
+  text-shadow: 0 0 5px #d63031, 0 0 4px #d63031, 0 0 15px #d63031, 0 0 20px #d63031,
     0 0 35px #d63031;
 }
 .border {
@@ -249,7 +249,7 @@ nav ul li a:hover {
 
 #btndark {
   text-align: center;
-  transition: 1s;
+  transition: 0.4s;
 }
 #btndark i {
   font-size: 32px;

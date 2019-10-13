@@ -13,8 +13,10 @@ document.getElementById("btndark").onclick = function() {
   if (CmptDM % 2 === 0) {
     document.getElementById("btndark").innerHTML = '<i class="fas fa-moon"></i>';
     document.body.style.background = "#131418";
+    document.body.style.color = "#fff";
   } else {
     document.getElementById("btndark").innerHTML = '<i class="fas fa-sun"></i>';
     document.body.style.background = "#ffffff";
+    document.body.style.color = "#131418";
   }
 };
