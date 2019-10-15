@@ -14,9 +14,20 @@ document.getElementById("btndark").onclick = function() {
     document.getElementById("btndark").innerHTML = '<i class="fas fa-moon"></i>';
     document.body.style.background = "#131418";
     document.body.style.color = "#fff";
+    var x = document.getElementsByClassName("progress");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.background = "#ddd";
+    }
   } else {
     document.getElementById("btndark").innerHTML = '<i class="fas fa-sun"></i>';
-    document.body.style.background = "#ffffff";
+    document.body.style.background = "#ECE9E6";
     document.body.style.color = "#131418";
+
+    var x = document.getElementsByClassName("progress");
+    var i;
+    for (i = 0; i < x.length; i++) {
+      x[i].style.background = "#111";
+    }
   }
 };

@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
+strong {
+  text-shadow: rgb(255, 255, 255) 0px 0 1px;
+}
+
 /* ----------------------------- Accueil ----------------------------- */
 
 header {
@@ -321,7 +325,7 @@ nav ul li a:hover {
 }
 .containerServices .cards:nth-child(1),
 .containerServices .cards:nth-child(1) .overlay {
-  background: linear-gradient(45deg, #d63031, #1f1c18);
+  background: linear-gradient(45deg, #e53935, #813736);
 }
 .containerServices .cards:nth-child(2),
 .containerServices .cards:nth-child(2) .overlay {
@@ -329,7 +333,7 @@ nav ul li a:hover {
 }
 .containerServices .cards:nth-child(3),
 .containerServices .cards:nth-child(3) .overlay {
-  background: linear-gradient(45deg, #757f9a, #d7dde8);
+  background: linear-gradient(45deg, #304352, #d7d2cc);
 }
 .containerServices .cards .imgBx {
   position: absolute;
@@ -411,7 +415,87 @@ nav ul li a:hover {
   margin: 0;
   padding: 0;
 }
+.containerServices ul li {
+  list-style-type: none;
+}
+.containerServices ul li::before {
+  content: "\2AA7";
+  margin: 10px;
+  margin-left: -10px;
+}
 
+/* ----------------------------- SOCIAUX ----------------------------- */
+
+.sectionReseaux {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  background: linear-gradient(45deg, #232526, #414345);
+  box-shadow: 0 5px 8px 0px #d63031;
+  height: 150px;
+}
+.socialbtn {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  background: #f1f1f1;
+  margin-left: 50px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #1d1d1d;
+  color: #d63031;
+  overflow: hidden;
+  position: relative;
+}
+.socialbtn i {
+  line-height: 90px;
+  font-size: 26px;
+  transition: 0.4s linear;
+}
+
+.socialbtn:hover i {
+  transform: scale(1.3);
+  color: #ddd;
+}
+.socialbtn::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #d63031;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.socialbtn:hover::before {
+  animation: social 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+/* ----------------------------- EQUIPE  ----------------------------- */
+
+.sectionEquipe {
+  width: 100%;
+  height: 200px;
+}
+
+@keyframes social {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+  100% {
+    top: -10%;
+    left: -10%;
+  }
+}
+/* ----------------------------- RESPONSIVE ----------------------------- */
 @media (max-width: 1200px) {
   header {
     margin: 20px;
@@ -515,6 +599,15 @@ nav ul li a:hover {
 
   .containerServices .cards {
     margin-top: 25px;
+  }
+
+  .socialbtn {
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+  }
+  .socialbtn i {
+    line-height: 70px;
   }
 }
 @media (max-width: 500px) {
